@@ -1,0 +1,71 @@
+{% extends 'base.html.twig' %}
+
+{% block menubar %}
+    <button class="button action base last" type="submit" form="settingsform">Mentés</button>
+{% endblock %}
+
+{% block main %}
+    <form method="POST" id="settingsform">
+        <div class="tab_content narrow flex">
+            <div class="subsection is-title">
+                <div class="subsec-title leading-none whitespace-nowrap pl-3">Beállítások</div>
+            </div>
+            <div class="content-panel">
+                <div class="flex w-full flex-col gap-2">
+                    <div class="subsection">
+                        <div class="subsubsection">
+                            <label for="status_atad" class="subsubsec-title">Átadás státusz</label>
+                        </div>
+                    </div>
+                    <select name="status_atad" id="status_atad">
+                        {% for orderStatus in response.OrderStatus %}
+                            <option value="{{ orderStatus.Id }}" {{ settings.status_atad == orderStatus.Id ? ' selected' : '' }}>{{ orderStatus.Name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+            <div class="content-panel">
+                <div class="flex w-full flex-col gap-2">
+                    <div class="subsection">
+                        <div class="subsubsection">
+                            <label for="status_teljesites" class="subsubsec-title">Teljesítés alatt státusz</label>
+                        </div>
+                    </div>
+                    <select name="status_teljesites" id="status_teljesites">
+                        {% for orderStatus in response.OrderStatus %}
+                            <option value="{{ orderStatus.Id }}" {{ settings.status_teljesites == orderStatus.Id ? ' selected' : '' }}>{{ orderStatus.Name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+            <div class="content-panel">
+                <div class="flex w-full flex-col gap-2">
+                    <div class="subsection">
+                        <div class="subsubsection">
+                            <label for="status_teljesitve" class="subsubsec-title">Teljesítve státusz</label>
+                        </div>
+                    </div>
+                    <select name="status_teljesitve" id="status_teljesitve">
+                        {% for orderStatus in response.OrderStatus %}
+                            <option value="{{ orderStatus.Id }}" {{ settings.status_teljesitve == orderStatus.Id ? ' selected' : '' }}>{{ orderStatus.Name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+            <div class="content-panel">
+                <div class="flex w-full flex-col gap-2">
+                    <div class="subsection">
+                        <div class="subsubsection">
+                            <label for="status_sikertelen" class="subsubsec-title">Sikertelen státusz</label>
+                        </div>
+                    </div>
+                    <select name="status_sikertelen" id="status_sikertelen">
+                        {% for orderStatus in response.OrderStatus %}
+                            <option value="{{ orderStatus.Id }}" {{ settings.status_sikertelen == orderStatus.Id ? ' selected' : '' }}>{{ orderStatus.Name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+        </div>
+    </form>
+{% endblock %}

@@ -1,0 +1,22 @@
+{
+    "name": "unas/demoapp",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:Unas-Online/unas-connect.git"
+        }
+    ],
+    "require": {
+        "slim/psr7": "^1.7",
+        "slim/slim": "4.*",
+        "vlucas/phpdotenv": "^5.6",
+        "php-di/slim-bridge": "^3.4",
+        "slim/twig-view": "^3.4",
+        "unasonline/unas-connect": "dev-main"
+    }
+}

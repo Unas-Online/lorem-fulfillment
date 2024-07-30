@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block menubar %}
+    <form method="post" action="{{ url_for('simulate') }}">
+        <button type="submit" class="button action base last">Teszt</button>
+    </form>
+    <form method="post">
+        <button type="submit" class="button action base">Rendelések frissítése</button>
+    </form>
+{% endblock %}
+
+{% block main %}
+    <div class="table-container">
+        <table class="list-table">
+            <thead>
+                <tr>
+                    <th>Azonosító</th>
+                    <th>Megrendelő</th>
+                    <th>Összeg</th>
+                    <th>Státusz</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for order in orders %}
+                    <tr>
+                        <td>{{ order.Key }}</td>
+                        <td>{{ order.Customer.Contact.Name }}</td>
+                        <td>{{ order.SumPriceGross | number_format(0, '.', ' ') }} {{ order.Currency }}</td>
+                        <td>{{ order.Status }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
