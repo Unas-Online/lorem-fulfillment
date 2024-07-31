@@ -12,6 +12,6 @@ services:
       - '443:443'
     environment:
       DOMAINS: '${APP_DOMAIN} -> http://app'
-      STAGE: 'production' # Don't use production until staging works
+      STAGE: ${LETSENCRYPT_STAGE-local} # Don't use production until staging works
     volumes:
       - ./data/https-portal:/var/lib/https-portal

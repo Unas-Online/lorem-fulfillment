@@ -49,8 +49,12 @@ class Controller
         return $this->routeParser->urlFor($route);
     }
 
-    public function apiCall(string $method, array $xml,  string $rootElement = '', bool $withoutToken = false): ApiResponse
-    {
+    public function apiCall(
+        string $method,
+        array $xml,
+        string $rootElement = '',
+        bool $withoutToken = false
+    ): ApiResponse {
         return $this->get('unas-api')->apiCall($method, $xml, $rootElement, $withoutToken);
     }
 

@@ -95,9 +95,9 @@ class FulfillmentService
 
     /**
      * Simulate the fulfillment process
-     * 
+     *
      * Updates status of some orders, based on random values.
-     * 
+     *
      * @return void
      */
     public function simulateFulfillment(): void

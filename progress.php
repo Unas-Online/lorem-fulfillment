@@ -17,7 +17,7 @@ while (true) {
 
 /**
  * Simulate the progress of fulfillment
- * 
+ *
  * @param string $base path for shop data
  */
 function updateShops(string $base): void
