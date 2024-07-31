@@ -1644,15 +1644,17 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:Unas-Online/unas-connect.git",
-                "reference": "148b78720ff1f3e1f1d79a88d97e11e0c0c7d197"
+                "reference": "a1d2e3c63a7c8cda2319fb754a601317a04bca54"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Unas-Online/unas-connect/zipball/148b78720ff1f3e1f1d79a88d97e11e0c0c7d197",
-                "reference": "148b78720ff1f3e1f1d79a88d97e11e0c0c7d197",
+                "url": "https://api.github.com/repos/Unas-Online/unas-connect/zipball/a1d2e3c63a7c8cda2319fb754a601317a04bca54",
+                "reference": "a1d2e3c63a7c8cda2319fb754a601317a04bca54",
                 "shasum": ""
             },
             "require": {
+                "ext-dom": "*",
+                "php": "^8.0",
                 "spatie/array-to-xml": "^3.3"
             },
             "default-branch": true,
@@ -1663,10 +1665,10 @@
                 }
             },
             "support": {
-                "source": "https://github.com/Unas-Online/unas-connect/tree/main",
+                "source": "https://github.com/Unas-Online/unas-connect/tree/v0.1.2",
                 "issues": "https://github.com/Unas-Online/unas-connect/issues"
             },
-            "time": "2024-07-30T06:57:55+00:00"
+            "time": "2024-07-31T06:45:05+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
