@@ -35,7 +35,7 @@ class FulfillmentService
 
         $this->storage->deleteOrders();
         foreach ($orderResponse->getResponse()['Order'] as $order) {
-            if (in_array($order->StatusID, array_values($settings))) {
+            if (in_array($order['StatusID'], array_values($settings))) {
                 $this->storage->updateOrder((array)$order);
             }
         }
