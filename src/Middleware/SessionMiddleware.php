@@ -14,6 +14,8 @@ class SessionMiddleware extends Middleware implements MiddlewareInterface
 {
     public function process(Request $request, RequestHandler $handler): ResponseInterface
     {
+        ini_set('session.cookie_samesite', 'None');
+        ini_set('session.cookie_secure', 'true');
         session_start();
         $response = $handler->handle($request);
         return $response;
