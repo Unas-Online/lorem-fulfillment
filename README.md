@@ -1,4 +1,4 @@
-# UNAS example app (Lorem Fulfillment)
+# UNAS demo app (Lorem Fulfillment)
 
 This is a demo project containing examples on how to use the official [unas-connect](https://github.com/Unas-Online/unas-connect/tree/main) PHP package when building third-party integrations for UNAS stores.
 
