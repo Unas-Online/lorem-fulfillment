@@ -4,9 +4,15 @@
     <form method="post" action="{{ url_for('simulate') }}">
         <button type="submit" class="button action base last">Teszt</button>
     </form>
-    <form method="post">
-        <button type="submit" class="button action base">Rendelések frissítése</button>
+    <form method="post" onsubmit="startRefresh()">
+        <button id="startordupdate" type="submit" class="button action base">Rendelések frissítése</button>
     </form>
+    <script defer>
+        function startRefresh() {
+            document.querySelector("#startordupdate").innerHTML = "Frissítés folyamatban...";
+            document.querySelector("#startordupdate").disabled = true;
+        }
+    </script>
 {% endblock %}
 
 {% block main %}
