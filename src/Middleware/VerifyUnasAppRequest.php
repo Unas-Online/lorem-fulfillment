@@ -20,13 +20,10 @@ class VerifyUnasAppRequest extends Middleware implements MiddlewareInterface
         $params = $request->getMethod() == 'GET'
             ? $request->getQueryParams()
             : $request->getParsedBody();
-        
-        if (empty($params['hmac'])) {
-            throw new Exception('Validation error!');
-        }
 
-        if ($app->generateHmac($params['shop_id'], $params['time'], $params['token']) != $params['hmac']) {
-            throw new Exception('Validation error!');
+        $verify = $app->verifyRequest($params['shop_id'], $params['time'], $params['token'], $params['hmac']);
+        if ($verify !== true) {
+            throw new Exception('Validation error: ' . $verify);
         }
 
         $_SESSION['shop_id'] = $params['shop_id'];
