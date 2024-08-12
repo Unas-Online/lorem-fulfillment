@@ -10,13 +10,12 @@
     <script defer>
         function startRefresh() {
             document.querySelector("#startordupdate").innerHTML = "Frissítés folyamatban...";
-            document.querySelector("#startsimbtn").disabled = true;
             document.querySelector("#startordupdate").disabled = true;
         }
 
         function startSimulation() {
+            document.querySelector("#startsimbtn").innerHTML = "Szimuláció folyamatban...";
             document.querySelector("#startsimbtn").disabled = true;
-            document.querySelector("#startordupdate").disabled = true;
             window.setTimeout(() => {
                 document.querySelector("#sim_form").submit();
             }, 2000);
