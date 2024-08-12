@@ -20,18 +20,18 @@
                 <div class="action-panel px-2 py-1">
                     <div class="title-bar"></div>
                     <div class="buttons flex gap-1 items-center">
-                        {% block menubar %}
-                        {% endblock %}
                         {% if context.uri.path == url_for('settings') %}
                             <a class="button action base" href="{{ url_for('index') }}">Megrendelések</a>
                         {% else %}
                             <a class="button action base" href="{{ url_for('settings') }}">Beállítások</a>
                         {% endif %}
+                        {% block menubar %}
+                        {% endblock %}
                     </div>
                 </div>
             </div>
         </div>
-        <div class="px-2 py-1" style="overflow-y: scroll">
+        <div class="px-2 py-1 flex flex-col gap-1" style="overflow-y: scroll">
             {% block main %}
             {% endblock %}
         </div>

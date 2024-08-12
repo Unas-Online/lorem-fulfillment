@@ -34,9 +34,11 @@ class FulfillmentService
         $settings = $this->storage->getSettings();
 
         $this->storage->deleteOrders();
-        foreach ($orderResponse->getResponse()['Order'] as $order) {
-            if (array_key_exists('StatusID', $order) && in_array($order['StatusID'], array_values($settings))) {
-                $this->storage->updateOrder((array)$order);
+        if (array_key_exists('Order', $orderResponse->getResponse())) {
+            foreach ($orderResponse->getResponse()['Order'] as $order) {
+                if (array_key_exists('StatusID', $order) && in_array($order['StatusID'], array_values($settings))) {
+                    $this->storage->updateOrder((array)$order);
+                }
             }
         }
     }

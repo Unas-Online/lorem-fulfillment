@@ -1,16 +1,26 @@
 {% extends 'base.html.twig' %}
 
 {% block menubar %}
-    <form method="post" action="{{ url_for('simulate') }}">
-        <button type="submit" class="button action base last">Teszt</button>
-    </form>
     <form method="post" onsubmit="startRefresh()">
         <button id="startordupdate" type="submit" class="button action base">Rendelések frissítése</button>
+    </form>
+    <button type="button" class="button action base last" id="startsimbtn" onclick="startSimulation()">Szimuláció</button>
+    <form id="sim_form" method="post" action="{{ url_for('simulate') }}">
     </form>
     <script defer>
         function startRefresh() {
             document.querySelector("#startordupdate").innerHTML = "Frissítés folyamatban...";
+            document.querySelector("#startsimbtn").disabled = true;
             document.querySelector("#startordupdate").disabled = true;
+        }
+
+        function startSimulation() {
+            document.querySelector("#startsimbtn").disabled = true;
+            document.querySelector("#startordupdate").disabled = true;
+            window.setTimeout(() => {
+                document.querySelector("#sim_form").submit();
+            }, 2000);
+
         }
     </script>
 {% endblock %}
