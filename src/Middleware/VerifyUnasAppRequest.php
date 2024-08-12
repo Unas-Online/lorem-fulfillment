@@ -23,9 +23,9 @@ class VerifyUnasAppRequest extends Middleware implements MiddlewareInterface
 
         $verify = $app->verifyRequest($params['shop_id'], $params['time'], $params['token'], $params['hmac']);
         if ($verify !== true) {
+            $_SESSION['shop_id'] = null;
             throw new Exception('Validation error: ' . $verify);
         }
-
         $_SESSION['shop_id'] = $params['shop_id'];
         
         $response = $handler->handle($request);

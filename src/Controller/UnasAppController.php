@@ -22,11 +22,11 @@ class UnasAppController extends Controller
         $storage = new Storage($this->get('app-root'), $_SESSION['shop_id']);
         if ($storage->hasSettings()) {
             return $response
-                ->withHeader('Location', $this->urlFor('index'))
+                ->withHeader('Location', '/')
                 ->withStatus(302);
         } else {
             return $response
-                ->withHeader('Location', $this->urlFor('settings'))
+                ->withHeader('Location', '/settings')
                 ->withStatus(302);
         }
     }
