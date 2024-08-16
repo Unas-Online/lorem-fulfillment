@@ -109,15 +109,10 @@ class FulfillmentService
         $orders = $this->storage->getOrders();
 
         foreach ($orders as $orderData) {
-            $proceed = rand(0, 4) != 1;
-            if (!$proceed) {
-                continue;
-            }
-            
             $orderStatus = $orderData['StatusID'];
     
             if ($settingsFlip[$orderStatus] == 'status_teljesites') {
-                $success = rand(0, 4) != 1;
+                $success = rand(0, 7) != 1;
                 $this->client->apiCall('setOrder', [
                     'Order' => [
                         [
