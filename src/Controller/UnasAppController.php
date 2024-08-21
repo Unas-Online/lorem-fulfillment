@@ -16,6 +16,10 @@ class UnasAppController extends Controller
 {
     /**
      * Authenticate using start request from UNAS, redirect
+     *
+     * @param Request  $request  incoming request
+     * @param Response $response outgoing response
+     * @param array    $args     args - unused
      */
     public function start(Request $request, Response $response, $args): Response
     {
@@ -33,6 +37,10 @@ class UnasAppController extends Controller
 
     /**
      * Handle app install request from UNAS
+     *
+     * @param Request  $request  incoming request
+     * @param Response $response outgoing response
+     * @param array    $args     args - unused
      */
     public function install(Request $request, Response $response, $args): Response
     {
@@ -61,6 +69,10 @@ class UnasAppController extends Controller
 
     /**
      * Handle app uninstall request from UNAS
+     *
+     * @param Request  $request  incoming request
+     * @param Response $response outgoing response
+     * @param array    $args     args - unused
      */
     public function uninstall(Request $request, Response $response, $args): Response
     {

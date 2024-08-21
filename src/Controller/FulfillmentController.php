@@ -14,6 +14,10 @@ class FulfillmentController extends Controller
 {
     /**
      * Order list page handler
+     *
+     * @param Request  $request  incoming request
+     * @param Response $response outgoing response
+     * @param array    $args     args - unused
      */
     public function index(Request $request, Response $response, $args): Response
     {
@@ -30,6 +34,10 @@ class FulfillmentController extends Controller
 
     /**
      * Handler for manual order list update
+     *
+     * @param Request  $request  incoming request
+     * @param Response $response outgoing response
+     * @param array    $args     args - unused
      */
     public function loadOrders(Request $request, Response $response, $args): Response
     {
@@ -44,6 +52,10 @@ class FulfillmentController extends Controller
 
     /**
      * Simulate fulfillment progress
+     *
+     * @param Request  $request  incoming request
+     * @param Response $response outgoing response
+     * @param array    $args     args - unused
      */
     public function simulate(Request $request, Response $response, $args): Response
     {
@@ -58,6 +70,10 @@ class FulfillmentController extends Controller
 
     /**
      * Handle product status update webhook calls
+     *
+     * @param Request  $request  incoming request
+     * @param Response $response outgoing response
+     * @param array    $args     args - unused
      */
     public function handleWebhook(Request $request, Response $response, $args): Response
     {

@@ -11,6 +11,13 @@ use Psr\Http\Message\ServerRequestInterface as Request;
  */
 class SettingsController extends Controller
 {
+    /**
+     * Render settings page
+     *
+     * @param Request  $request  incoming request
+     * @param Response $response outgoing response
+     * @param array    $args     args - unused
+     */
     public function settings(Request $request, Response $response, $args): Response
     {
         $apiResponse = $this->apiCall('getOrderStatus', [], 'Params')->getResponse();
@@ -22,6 +29,13 @@ class SettingsController extends Controller
         ], $request);
     }
 
+    /**
+     * Save settings, redirect to main page
+     *
+     * @param Request  $request  incoming request
+     * @param Response $response outgoing response
+     * @param array    $args     args - unused
+     */
     public function saveSettings(Request $request, Response $response, $args)
     {
         $storage = $this->get('storage');

@@ -16,6 +16,11 @@ class Controller
     protected Container $container;
     private $routeParser;
 
+    /**
+     * Construct a generic container
+     *
+     * @param Container $container dependency container
+     */
     public function __construct(Container $container)
     {
         $this->container = $container;
@@ -49,6 +54,16 @@ class Controller
         return $this->routeParser->urlFor($route);
     }
 
+    /**
+     * Helper method to make api call using the api client instance in the container
+     *
+     * @param string $method       UNAS api method
+     * @param array  $xml          XML request data in array format
+     * @param string $rootElement  name of XML root element
+     * @param bool   $withoutToken perform request without api token
+     *
+     * @return ApiResponse
+     */
     public function apiCall(
         string $method,
         array $xml,

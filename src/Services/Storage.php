@@ -12,6 +12,12 @@ class Storage implements ClientCacheInterface
     private string $shopId;
     private string $baseDir;
     
+    /**
+     * Construct an instance of Storage
+     *
+     * @param string $appRoot app installation path
+     * @param string $shop_id UNAS shop id
+     */
     public function __construct(string $appRoot, string $shop_id)
     {
         $this->shopId = $shop_id;
@@ -253,12 +259,23 @@ class Storage implements ClientCacheInterface
         }
     }
 
+    /**
+     * Save unas login request response
+     *
+     * @param array $data login response
+     */
     public function cacheUnasApiLogin(array $data): void
     {
         $this->deleteApiToken();
         $this->setApiToken($data);
     }
 
+
+    /**
+     * Restore unas login request response
+     *
+     * @return array saved login response
+     */
     public function restoreUnasApiLogin(): ?array
     {
         return $this->getApiTokenData();

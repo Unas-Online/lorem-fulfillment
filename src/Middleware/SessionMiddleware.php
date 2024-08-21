@@ -13,6 +13,12 @@ use UnasOnline\UnasConnect\Utils\Arrays;
  */
 class SessionMiddleware extends Middleware implements MiddlewareInterface
 {
+    /**
+     * Process an incoming server request.
+     *
+     * @param Request        $request incoming request
+     * @param RequestHandler $handler additional request handler
+     */
     public function process(Request $request, RequestHandler $handler): ResponseInterface
     {
         ini_set('session.cookie_samesite', 'None');

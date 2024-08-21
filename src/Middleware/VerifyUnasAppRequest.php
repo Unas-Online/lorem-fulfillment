@@ -13,6 +13,12 @@ use Psr\Http\Server\RequestHandlerInterface as RequestHandler;
  */
 class VerifyUnasAppRequest extends Middleware implements MiddlewareInterface
 {
+    /**
+     * Process an incoming server request.
+     *
+     * @param Request        $request incoming request
+     * @param RequestHandler $handler additional request handler
+     */
     public function process(Request $request, RequestHandler $handler): ResponseInterface
     {
         $app = $this->container->get('unas-app');

@@ -14,6 +14,12 @@ use UnasOnline\UnasConnect\Api\Client;
  */
 class AddApiClient extends Middleware implements MiddlewareInterface
 {
+    /**
+     * Process an incoming server request.
+     * 
+     * @param Request        $request incoming request
+     * @param RequestHandler $handler additional request handler
+     */
     public function process(Request $request, RequestHandler $handler): ResponseInterface
     {
         $storage = new Storage($this->container->get('app-root'), $_SESSION['shop_id']);
