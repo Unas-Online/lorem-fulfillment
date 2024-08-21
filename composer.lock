@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2f323c4f1d56f7494b6fe56190ea464d",
+    "content-hash": "52be3dd65314403549e7416155ddb95b",
     "packages": [
         {
             "name": "fig/http-message-util",
@@ -1642,16 +1642,16 @@
         },
         {
             "name": "unasonline/unas-connect",
-            "version": "0.1.7",
+            "version": "0.1.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Unas-Online/unas-connect.git",
-                "reference": "b7c5a9aa81edf0f217012756b52136198c9ee3be"
+                "reference": "dcca310d00dcb35b72bf657d8877aa565d72d13b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Unas-Online/unas-connect/zipball/b7c5a9aa81edf0f217012756b52136198c9ee3be",
-                "reference": "b7c5a9aa81edf0f217012756b52136198c9ee3be",
+                "url": "https://api.github.com/repos/Unas-Online/unas-connect/zipball/dcca310d00dcb35b72bf657d8877aa565d72d13b",
+                "reference": "dcca310d00dcb35b72bf657d8877aa565d72d13b",
                 "shasum": ""
             },
             "require": {
@@ -1666,10 +1666,10 @@
                 }
             },
             "support": {
-                "source": "https://github.com/Unas-Online/unas-connect/tree/v0.1.7",
+                "source": "https://github.com/Unas-Online/unas-connect/tree/v0.1.9",
                 "issues": "https://github.com/Unas-Online/unas-connect/issues"
             },
-            "time": "2024-08-12T07:43:21+00:00"
+            "time": "2024-08-21T11:05:12+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
