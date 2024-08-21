@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "424022639cbbbb73ea78ebb7d19e84b5",
+    "content-hash": "2f323c4f1d56f7494b6fe56190ea464d",
     "packages": [
         {
             "name": "fig/http-message-util",
@@ -1642,10 +1642,10 @@
         },
         {
             "name": "unasonline/unas-connect",
-            "version": "dev-main",
+            "version": "0.1.7",
             "source": {
                 "type": "git",
-                "url": "git@github.com:Unas-Online/unas-connect.git",
+                "url": "https://github.com/Unas-Online/unas-connect.git",
                 "reference": "b7c5a9aa81edf0f217012756b52136198c9ee3be"
             },
             "dist": {
@@ -1659,7 +1659,6 @@
                 "php": "^8.0",
                 "spatie/array-to-xml": "^3.3"
             },
-            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -1667,7 +1666,7 @@
                 }
             },
             "support": {
-                "source": "https://github.com/Unas-Online/unas-connect/tree/main",
+                "source": "https://github.com/Unas-Online/unas-connect/tree/v0.1.7",
                 "issues": "https://github.com/Unas-Online/unas-connect/issues"
             },
             "time": "2024-08-12T07:43:21+00:00"
@@ -1760,9 +1759,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "unasonline/unas-connect": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

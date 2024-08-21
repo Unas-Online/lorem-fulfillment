@@ -8,7 +8,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "git@github.com:Unas-Online/unas-connect.git"
+            "url": "https://github.com/Unas-Online/unas-connect"
         }
     ],
     "require": {
@@ -17,6 +17,6 @@
         "vlucas/phpdotenv": "^5.6",
         "php-di/slim-bridge": "^3.4",
         "slim/twig-view": "^3.4",
-        "unasonline/unas-connect": "dev-main"
+        "unasonline/unas-connect": "^0.1"
     }
 }
